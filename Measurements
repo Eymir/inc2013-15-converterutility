@@ -1,0 +1,311 @@
+import java.util.*;
+
+public class ProgAppsProjectMeasurements{
+	public static void main(String[] args){
+		Scanner kbd = new Scanner(System.in);
+
+		while(true){
+			System.out.println("Temperature Converter Menu");
+			System.out.println("1.Minute to Second");
+			System.out.println("2.Second to Minute");
+			System.out.println("3.Hour to Minute");
+			System.out.println("4.Minute to Hour");
+			System.out.println("5.Second to Hour");
+			System.out.println("6.Hour to Second");
+			System.out.println("7.Kilometer to Meter");
+			System.out.println("8.Meter to Kilometer");
+		    System.out.println("9.Kilometer to Milimeter");
+		    System.out.println("10.Milimeter to Kilometer");
+		    System.out.println("11.Centimeter to Kilometer");
+		    System.out.println("12.Kilometer to Centimeter");
+		    System.out.println("13.Milimeter to Centimeter");
+		    System.out.println("14.Centimeter to Milimeter");
+		    System.out.println("15.Meter to Centimeter");
+		    System.out.println("16.Centimeter to Meter");
+		    System.out.println("17.Liter to Mililiter");
+		    System.out.println("18.Mililiter to Liter");
+		    System.out.println("19.Centiliter to Meliliter");
+		    System.out.println("20.Meliliter to Centiliter");
+		    System.out.println("21.Liter to Centiliter");
+		    System.out.println("22.Centiliter to Liter");
+			System.out.println("23.Quit");
+			System.out.println("Please Enter Your Choice");
+			int choice = kbd.nextInt();
+
+			switch(choice){
+			case 1:
+					doMinuteSecond();
+					break;
+			case 2:
+					doSecondMinute();
+					break;
+
+			case 3:
+					doHourMinute();
+					break;
+
+			case 4:
+					doMinuteHour();
+					break;
+
+			case 5:
+					doSecondHour();
+					break;
+
+			case 6:
+					doHourSecond();
+					break;
+
+			case 7:
+					doKMtoM();
+					break;
+
+			case 8:
+					doMtoKM();
+					break;
+
+			case 9:
+					doKMtoMM();
+					break;
+
+			case 10:
+					doMMtoKM();
+					break;
+
+			case 11:
+					doCMtoKM();
+					break;
+
+			case 12:
+					doKMtoCM();
+					break;
+
+			case 13:
+					doMMtoCM();
+					break;
+
+			case 14:
+					doCMtoMM();
+					break;
+
+			case 15:
+					doMtoCM();
+					break;
+
+			case 16:
+					doCMtoM();
+					break;
+
+			case 17:
+					doMLtoL();
+					break;
+
+			case 18:
+					doLtoML();
+					break;
+
+			case 19:
+					doCLtoML();
+					break;
+
+			case 20:
+					doMLtoCL();
+					break;
+
+			case 21:
+					doLtoCL();
+					break;
+
+			case 22:
+					doCLtoL();
+					break;
+
+			case 23:
+				 	System.exit(0);
+					break;
+			default:
+					System.out.println("invalid choice");
+					break;
+				}
+			}
+		}
+		public static void doMinuteSecond(){
+		Scanner kbd = new Scanner(System.in);
+		System.out.println("please enter your time in Minute");
+		double minute = kbd.nextDouble();
+		double second = minute*60;
+		System.out.println(minute + " minute/s =" + second + " second/s");
+		}
+
+		public static void doSecondMinute(){
+		Scanner kbd = new Scanner(System.in);
+		System.out.println("please enter your time in Second");
+		double second = kbd.nextDouble();
+		double minute = second/60;
+		System.out.println(minute + " minute/s =" + second + " second/s");
+		}
+
+		public static void doHourMinute(){
+		Scanner kbd = new Scanner(System.in);
+		System.out.println("please enter your time in Hour");
+		double hour = kbd.nextDouble();
+		double minute = hour*60;
+		System.out.println(hour + " hour/s =" + minute + " minute/s");
+		}
+
+		public static void doMinuteHour(){
+		Scanner kbd = new Scanner(System.in);
+		System.out.println("please enter your time in Minute");
+		double minute = kbd.nextDouble();
+		double hour = minute/60;
+		System.out.println(minute+ " minute/s =" + hour + " hour/s");
+		}
+
+		public static void doSecondHour(){
+		Scanner kbd = new Scanner(System.in);
+		System.out.println("please enter your time in Second");
+		double second = kbd.nextDouble();
+		double hour = second/3600;
+		System.out.println(second+ " second/s =" + hour + " hour/s");
+		}
+
+		public static void doHourSecond(){
+		Scanner kbd = new Scanner(System.in);
+		System.out.println("please enter your time in Second");
+		double second = kbd.nextDouble();
+		double hour = second/3600;
+		System.out.println(second+ " second/s =" + hour + " hour/s");
+		}
+
+		public static void doKMtoM(){
+		Scanner kbd = new Scanner(System.in);
+		System.out.println("please enter your length in km");
+		double km = kbd.nextDouble();
+		double m = km*100;
+		System.out.println(km + "km =" + m + "m");
+		}
+
+		public static void doMtoKM(){
+		Scanner kbd = new Scanner(System.in);
+		System.out.println("please enter your length in m");
+		double m = kbd.nextDouble();
+		double km = m/100;
+		System.out.println(m + "m =" + km + "km");
+		}
+
+		public static void doKMtoMM(){
+		Scanner kbd = new Scanner(System.in);
+		System.out.println("please enter your length in km");
+		double km = kbd.nextDouble();
+		double mm = km*1000000;
+		System.out.println(km + "km =" + mm + "mm");
+		}
+
+		public static void doMMtoKM(){
+		Scanner kbd = new Scanner(System.in);
+		System.out.println("please enter your length in mm");
+		double mm = kbd.nextDouble();
+		double km = mm/1000000;
+		System.out.println(mm + "mm =" + km + "km");
+		}
+
+		public static void doCMtoKM(){
+		Scanner kbd = new Scanner(System.in);
+		System.out.println("please enter your length in cm");
+		double cm = kbd.nextDouble();
+		double km = cm/1000;
+		System.out.println(cm + "cm =" + km + "km");
+		}
+
+		public static void doKMtoCM(){
+		Scanner kbd = new Scanner(System.in);
+		System.out.println("please enter your length in km");
+		double km = kbd.nextDouble();
+		double cm = km*1000;
+		System.out.println(km + "km =" + cm + "cm");
+		}
+
+		public static void doMMtoCM(){
+		Scanner kbd = new Scanner(System.in);
+		System.out.println("please enter your length in mm");
+		double mm = kbd.nextDouble();
+		double cm = mm/10;
+		System.out.println(mm + "mm =" + cm + "cm");
+		}
+
+		public static void doCMtoMM(){
+		Scanner kbd = new Scanner(System.in);
+		System.out.println("please enter your length in cm");
+		double cm = kbd.nextDouble();
+		double mm = cm*10;
+		System.out.println(cm + "cm =" + mm + "mm");
+		}
+
+		public static void doMtoCM(){
+		Scanner kbd = new Scanner(System.in);
+		System.out.println("please enter your length in m");
+		double m = kbd.nextDouble();
+		double cm = m*10;
+		System.out.println(m + "m =" + cm + "cm");
+		}
+
+		public static void doCMtoM(){
+		Scanner kbd = new Scanner(System.in);
+		System.out.println("please enter your length in m");
+		double cm = kbd.nextDouble();
+		double m = cm/10;
+		System.out.println(cm + "cm =" + m + "m");
+		}
+
+		public static void doMLtoL(){
+		Scanner kbd = new Scanner(System.in);
+		System.out.println("please enter your length in ml");
+		double ml = kbd.nextDouble();
+		double l = ml/100;
+		System.out.println(ml + "ml =" + l + "l");
+		}
+
+		public static void doLtoML(){
+		Scanner kbd = new Scanner(System.in);
+		System.out.println("please enter your length in l");
+		double l = kbd.nextDouble();
+		double ml = l/100;
+		System.out.println(l + "l =" + ml + "ml");
+		}
+
+		public static void doLtoCL(){
+		Scanner kbd = new Scanner(System.in);
+		System.out.println("please enter your length in l");
+		double l = kbd.nextDouble();
+		double cl = l*10;
+		System.out.println(l + "l =" + cl + "cl");
+		}
+
+		public static void doCLtoL(){
+		Scanner kbd = new Scanner(System.in);
+		System.out.println("please enter your length in l");
+		double cl = kbd.nextDouble();
+		double l = cl*100;
+		System.out.println(cl + "cl =" + l + "l");
+		}
+
+		public static void doCLtoML(){
+		Scanner kbd = new Scanner(System.in);
+		System.out.println("please enter your length in l");
+		double cl = kbd.nextDouble();
+		double ml = cl/1;
+		System.out.println(cl + "cl =" + ml + "ml");
+		}
+
+		public static void doMLtoCL(){
+		Scanner kbd = new Scanner(System.in);
+		System.out.println("please enter your length in ml");
+		double ml = kbd.nextDouble();
+		double cl = ml/1;
+		System.out.println(ml + "ml =" + cl + "cl");
+		}
+
+
+
+
+	}
